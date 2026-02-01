@@ -1,0 +1,64 @@
+[
+  {
+    "name": "Financial Statements",
+    "keywords": ["statement", "bank", "finance", "HEBREW_NEEDED"],
+    "targetPath": "Finance/Statements/{year}",
+    "dynamicVariables": {
+      "year": {
+        "regex": "(\\d{4})"
+      }
+    }
+  },
+  {
+    "name": "Invoices & Receipts",
+    "keywords": ["invoice", "receipt", "bill", "HEBREW_NEEDED"],
+    "targetPath": "Finance/Invoices_Receipts/{year}",
+    "dynamicVariables": {
+      "year": {
+        "regex": "(\\d{4})"
+      }
+    }
+  },
+  {
+    "name": "Tax Document",
+    "keywords": ["tax", "irs", "מס"],
+    "targetPath": "Finance/Taxes/{year}",
+    "dynamicVariables": {
+      "year": {
+        "regex": "(\\d{4})"
+      }
+    }
+  },
+  {
+    "name": "Work Documents",
+    "keywords": ["report", "project", "meeting", "HEBREW_NEEDED"],
+    "targetPath": "Work/Documents",
+    "dynamicVariables": {}
+  },
+  {
+    "name": "Education Materials",
+    "keywords": ["school", "course", "lecture", "HEBREW_NEEDED"],
+    "targetPath": "Education/{year}/{course_name}",
+    "dynamicVariables": {
+      "year": {
+        "regex": "(\\d{4})"
+      },
+      "course_name": {
+        "regex": "-(.*?)-"
+      }
+    }
+  },
+  {
+    "name": "General Documents (by Year-Month)",
+    "keywords": ["document", "file", "misc", "HEBREW_NEEDED"],
+    "targetPath": "General/{year}-{month}",
+    "dynamicVariables": {
+      "year": {
+        "regex": "(\\d{4})"
+      },
+      "month": {
+        "regex": "(\\d{2})"
+      }
+    }
+  }
+]
